@@ -1,7 +1,7 @@
 <div id="navbar" class="fixed top-0 z-50 w-full">
     <div class="flex justify-between text-white">
         <a href="/">
-            <h1 class="text-2xl font-medium p-6">DigiBlast</h1>
+            <h1 class="text-2xl font-medium p-6">{{ env('APP_NAME') }}</h1>
         </a>
         <div class="hidden sm:flex items-center gap-6 sm:px-4">
             <a href="#section-about">About</a>
