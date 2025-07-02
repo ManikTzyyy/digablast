@@ -52,30 +52,33 @@
 </div>
 
 <div id="section-pricing"
-    class="relative overflow-hidden bg-gradient-to-t from-primary to-black  min-h-screen text-white  py-5  sm:py-20">
+    class="relative overflow-hidden bg-gradient-to-t from-primary to-black min-h-screen text-white py-5 sm:py-20">
     <h2 class="text-center text-5xl pb-10" data-aos="fade-up">Pricing</h2>
-    <div class="flex items-center justify-center flex-col sm:flex-row gap-6 px-3">
-        <div data-aos="fade-up"
-            class="min-h-80 w-60 px-1 border-white border rounded-xl flex flex-col items-center p-2 justify-between">
-            <div class="flex flex-col items-center gap-2">
-                <h3 class="text-2xl">Basic</h3>
-                <p class="text-xs text-stone-400 text-center">Perfect for individuals or small businesses just
-                    getting started</p>
-                <h3 class="text-2xl">70K / <span class="text-base">month</span></h3>
-                <ul class="list-disc text-stone-300 space-y-2">
-                    <li class="text-xs">Send up to 500 messages/month</li>
-                    <li class="text-xs">Manual contact upload</li>
-                    <li class="text-xs">1 WhatsApp number</li>
-                    <li class="text-xs">Basic support</li>
-                    <li class="text-xs"> No automation</li>
-                </ul>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3 justify-items-center">
+        @foreach ($packages as $package)
+            <div data-aos="fade-up"
+                class="min-h-80 w-60 px-1 border-white border rounded-xl flex flex-col items-center p-2 justify-between">
+                <div class="flex flex-col items-center gap-2 flex-grow"> {{-- Tambahkan flex-grow di sini --}}
+                    <h3 class="text-2xl text-center">{{ $package->name }}</h3>
+                    <p class="text-xs text-stone-400 text-center">{{ $package->description }}</p>
+                    <h3 class="text-2xl">{{ $package->price }} / <span class="text-base">month</span></h3>
+                    <div class="flex-grow overflow-y-auto w-full px-2"> {{-- Tambahkan div wrapper dengan flex-grow dan
+                        overflow-y-auto --}}
+                        <ul class="list-disc text-stone-300 space-y-2">
+                            @foreach (explode(',', $package->benefits) as $benefit)
+                                <li class="text-xs">{{ $benefit }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <a href="" class="button button-white ">Select Plan
+                    <span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </a>
             </div>
-            <a href="" class="button button-white ">Select Plan
-                <span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </span>
-            </a>
-        </div>
+        @endforeach
+
         <div data-aos="fade-up"
             class="min-h-96 w-60 px-1 shadow-[0_0_10px_#fff] border-white border rounded-xl flex flex-col items-center p-2 justify-between">
             <div class="flex flex-col items-center gap-2">
