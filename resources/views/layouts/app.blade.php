@@ -14,6 +14,7 @@
 
 <body>
     @include('components.navbar')
+    @include('components.footer')
 </body>
 
 </html>
