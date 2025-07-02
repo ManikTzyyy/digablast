@@ -4,9 +4,11 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::controller(App\Http\Controllers\HomeController::class)
+    ->group(function () {
+        Route::get('/', 'landing_page')->name('landing_page');
+    });
 
 Route::controller(AuthController::class)
     ->group(function () {
