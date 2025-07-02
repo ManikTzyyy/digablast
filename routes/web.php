@@ -14,6 +14,3 @@ Route::controller(App\Http\Controllers\AuthController::class)
         Route::get('/login', 'login');
         Route::get('/register', 'register');
     });
-
-
-Volt::route('/counter', 'counter');
