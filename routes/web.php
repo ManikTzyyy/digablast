@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -10,7 +9,7 @@ Route::controller(App\Http\Controllers\HomeController::class)
         Route::get('/', 'landing_page')->name('landing_page');
     });
 
-Route::controller(AuthController::class)
+Route::controller(App\Http\Controllers\AuthController::class)
     ->group(function () {
         Route::get('/login', 'login');
         Route::get('/register', 'register');
