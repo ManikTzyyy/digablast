@@ -116,6 +116,30 @@ Button:hover{
     -webkit-filter: blur(20px);
 }
 
+
+#sidebar {
+    min-width: calc(var(--spacing) * 60);
+}
+
+#sidebar a{
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+#sidebar.collapse-menu{
+    min-width: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-menu{
+    display: none;
+}
+
 *{
     /* border: 1px solid red; */
 }

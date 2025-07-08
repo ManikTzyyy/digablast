@@ -1,39 +1,84 @@
-<div class="bg-[#090909] h-screen min-w-60 text-white p-3">
-    <h1 class="font-bold text-3xl border-stone-500 border-b pb-3">DigaBlast</h1>
-    <div class="pb-10"></div>
+<div class="bg-[#090909] h-screen  text-stone-500 p-3 relative shadow shadow-stone-900 " id="sidebar">
+    <button id="button-sidebar"
+        class="bg-white w-7 h-7 text-black rounded-full flex justify-center items-center absolute -right-3 top-5"><i
+            class="fa-solid fa-angles-right"></i></button>
+    <h1 id="title-sidebar" class="font-bold text-3xl  pb-3 text-white">DigaBlast</h1>
+    <div class="mb-10 border-stone-500 border-b"></div>
 
-    <a href="/dashboard" class="flex text-stone-500 items-center py-2 hover:text-white ">
-        <div class="flex relative justify-center items-center text-xl w-10 h-auto">
-            <i class="fa-solid fa-gauge "></i>
-        </div>
-        <p>Dashboard</p>
-    </a>
+    <div class="relative" id="menu-trigger">
+        <a href="/dashboard"
+            class="flex items-center py-2 hover:text-white {{ request()->is('dashboard') ? 'text-white bg-gray-800 rounded-2xl' : '' }} ">
+            <div class="flex relative justify-center items-center text-xl w-10 h-auto">
+                <i class="fa-solid fa-gauge "></i>
+            </div>
+            <p class="menu-text">Dashboard</p>
+        </a>
+        <span
+            class="absolute top-1/2 -translate-y-1/2 left-12 bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap hidden group-hover:block">
+            Dashboard
+        </span>
+    </div>
 
-    <a href="/device" class="flex text-stone-500 items-center py-2 hover:text-white">
-        <div class="flex relative justify-center items-center text-xl w-10 h-auto">
-            <i class="fa-solid fa-robot "></i>
-        </div>
-        <p>Devices</p>
-    </a>
 
-    <a href="/contact" class="flex text-stone-500 items-center py-2 hover:text-white">
-        <div class="flex relative justify-center items-center text-xl w-10 h-auto">
-            <i class="fa-solid fa-address-book "></i>
-        </div>
-        <p>Contact</p>
-    </a>
+    <div class="relative" id="menu-trigger">
+        <a href="/device"
+            class="flex items-center py-2 hover:text-white {{ request()->is('device') ? 'text-white bg-gray-800 rounded-2xl' : '' }}">
+            <div class="flex relative justify-center items-center text-xl w-10 h-auto">
+                <i class="fa-solid fa-robot "></i>
+            </div>
+            <p class="menu-text">Devices</p>
+        </a>
+        <span
+            class="absolute top-1/2 -translate-y-1/2 left-12 bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap hidden group-hover:block">
+            Devices
+        </span>
+    </div>
 
-    <a href="/template" class="flex text-stone-500 items-center py-2 hover:text-white">
-        <div class="flex relative justify-center items-center text-xl w-10 h-auto">
-            <i class="fa-solid fa-envelope-open-text "></i>
-        </div>
-        <p>Template</p>
-    </a>
+    <div class="relative" id="menu-trigger">
+        <a href="/contact"
+            class="flex items-center py-2 hover:text-white {{ request()->is('contact') ? 'text-white bg-gray-800 rounded-2xl' : '' }}">
+            <div class="flex relative justify-center items-center text-xl w-10 h-auto">
+                <i class="fa-solid fa-address-book "></i>
+            </div>
+            <p class="menu-text">Contact</p>
+        </a>
+        <span
+            class="absolute top-1/2 -translate-y-1/2 left-12 bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap hidden group-hover:block">
+            Contact
+        </span>
+    </div>
 
-    <a href="/blast" class="flex text-stone-500 items-center py-2 hover:text-white">
-        <div class="flex relative justify-center items-center text-xl w-10 h-auto">
-            <i class="fa-solid fa-explosion "></i>
-        </div>
-        <p>Blast</p>
-    </a>
+
+
+    <div class="relative" id="menu-trigger">
+        <a href="/template"
+            class="flex items-center py-2 hover:text-white {{ request()->is('template') ? 'text-white bg-gray-800 rounded-2xl' : '' }}">
+            <div class="flex relative justify-center items-center text-xl w-10 h-auto">
+                <i class="fa-solid fa-envelope-open-text "></i>
+            </div>
+            <p class="menu-text">Template</p>
+        </a>
+        <span
+            class="absolute top-1/2 -translate-y-1/2 left-12 bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap hidden group-hover:block">
+            Template
+        </span>
+    </div>
+
+
+
+    <div class="relative" id="menu-trigger">
+        <a href="/blast"
+            class="flex items-center py-2 hover:text-white {{ request()->is('blast') ? 'text-white bg-gray-800 rounded-2xl' : '' }}">
+            <div class="flex relative justify-center items-center text-xl w-10 h-auto">
+                <i class="fa-solid fa-explosion "></i>
+            </div>
+            <p class="menu-text">Blast</p>
+        </a>
+        <span
+            class="absolute top-1/2 -translate-y-1/2 left-12 bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap hidden group-hover:block">
+            Blast
+        </span>
+    </div>
+
+
 </div>

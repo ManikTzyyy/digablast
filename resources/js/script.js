@@ -20,3 +20,4 @@ window.addEventListener('scroll', ()=>{
         navbar.classList.remove('bg-black')
     }
 });
+
