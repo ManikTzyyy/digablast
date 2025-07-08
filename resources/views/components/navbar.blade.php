@@ -4,9 +4,9 @@
             <h1 class="text-2xl font-medium p-6">{{ env('APP_NAME') }}</h1>
         </a>
         <div class="hidden sm:flex items-center gap-6 sm:px-4">
-            <a href="#section-about">About</a>
-            <a href="#section-pricing">Pricing</a>
-            <a href="#footer">Contact</a>
+            <a href="/#section-about">About</a>
+            <a href="/#section-pricing">Pricing</a>
+            <a href="/#footer">Contact</a>
             <div class="flex gap-2"><a href="/login" class="button button-success">Sign In</a>
                 <a href="/register" class="button button-transparent">Sign Up</a>
             </div>
@@ -18,9 +18,9 @@
                 <div class="flex gap-5"><a href="/login" class="button button-success">Sign In</a>
                     <a href="/register" class="button button-transparent">Sign Up</a>
                 </div>
-                <a href="#section-about">About</a>
-                <a href="#section-pricing">Pricing</a>
-                <a href="#footer">Contact</a>
+                <a href="/#section-about">About</a>
+                <a href="/#section-pricing">Pricing</a>
+                <a href="/#footer">Contact</a>
 
             </div>
         </div>
