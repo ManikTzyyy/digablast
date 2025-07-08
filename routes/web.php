@@ -20,4 +20,8 @@ Route::controller(App\Http\Controllers\AuthController::class)
 Route::controller(App\Http\Controllers\DashboardController::class)
     ->group(function () {
         Route::get('/dashboard', 'dashboard');
+        Route::get('/device', 'device');
+        Route::get('/contact', 'contact');
+        Route::get('/template', 'template');
+        Route::get('/blast', 'blast');
     });
