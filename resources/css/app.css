@@ -17,7 +17,9 @@
     --color-error: #dc2626;
     --color-info: #2563eb;
     --color-primary: #112817;
-    --color-white-transparent : #ffffff15;
+    --color-white-transparent: #ffffff15;
+    --color-black: #000000;
+    --color-black2: #090909;
 }
 
 @font-face {
@@ -42,16 +44,23 @@
     -o-transition: all ease-in-out 0.3s;
 }
 
-Button:hover{
+Button:hover {
     cursor: pointer;
+}
 
+.button-primary{
+    background-color: var(--color-primary);
+}
+
+.button-primary:hover{
+    background-color: #0b1a0f;
 }
 
 .button-success {
     background-color: var(--color-success);
 }
 
-.button-success:hover{
+.button-success:hover {
     background: #39a661;
 }
 
@@ -116,12 +125,11 @@ Button:hover{
     -webkit-filter: blur(20px);
 }
 
-
 #sidebar {
     min-width: calc(var(--spacing) * 60);
 }
 
-#sidebar a{
+#sidebar a {
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -129,17 +137,17 @@ Button:hover{
     -o-transition: all 0.5s ease-in-out;
 }
 
-#sidebar.collapse-menu{
+#sidebar.collapse-menu {
     min-width: auto;
     gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.hidden-menu{
+.hidden-menu {
     display: none;
 }
 
-*{
+* {
     /* border: 1px solid red; */
 }

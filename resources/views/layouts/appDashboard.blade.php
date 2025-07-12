@@ -13,13 +13,19 @@
 </head>
 
 <body>
-    <div class="flex min-h-screen bg-[#000000]">
+    <div class="flex min-h-screen bg-black">
         {{-- sidebar --}}
-        @include('components.sidebar')
+        <div class="relative z-10"> @include('components.sidebar')</div>
 
-        <div class="bg-[#000000] text-white w-full">
+        <div class="bg-black text-white w-full relative">
             @include('components.header')
-            @yield('content')
+            @hasSection('headerTitle')
+                @yield('headerTitle')
+            @else
+                @include('components.headerTitle', ['title' => 'Default Title'])
+            @endif
+
+            <div class="w-full p-5">@yield('content')</div>
         </div>
     </div>
 </body>

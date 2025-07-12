@@ -1,7 +1,7 @@
-<div class="bg-[#090909] h-screen  text-stone-500 p-3 relative shadow shadow-stone-900 " id="sidebar">
+<div class="bg-black2 h-screen  text-stone-500 p-3 relative shadow shadow-stone-900 " id="sidebar">
     <button id="button-sidebar"
         class="bg-white w-7 h-7 text-black rounded-full flex justify-center items-center absolute -right-3 top-5"><i
-            class="fa-solid fa-angles-right"></i></button>
+            class="fa-solid " id="button-icon"></i></button>
     <h1 id="title-sidebar" class="font-bold text-3xl  pb-3 text-white">DigaBlast</h1>
     <div class="mb-10 border-stone-500 border-b"></div>
 
