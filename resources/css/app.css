@@ -31,7 +31,9 @@
 }
 
 .button {
-    padding: 5px 20px;
+    padding: 0 15px;
+    font-size: small;
+    padding-block: calc(var(--spacing) * 1.5);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -48,11 +50,11 @@ Button:hover {
     cursor: pointer;
 }
 
-.button-primary{
+.button-primary {
     background-color: var(--color-primary);
 }
 
-.button-primary:hover{
+.button-primary:hover {
     background-color: #0b1a0f;
 }
 
@@ -60,8 +62,24 @@ Button:hover {
     background-color: var(--color-success);
 }
 
+.button-warning {
+    background-color: var(--color-warning);
+}
+
+.button-error {
+    background-color: var(--color-error);
+}
+
 .button-success:hover {
     background: #39a661;
+}
+
+.button-warning:hover {
+    background: #e4ad20;
+}
+
+.button-error:hover {
+    background: #c32222;
 }
 
 .button-transparent {
@@ -126,6 +144,11 @@ Button:hover {
 }
 
 #sidebar {
+    /* min-width: calc(var(--spacing) * 60); */
+    width: auto;
+}
+
+#sidebar.expand-menu {
     min-width: calc(var(--spacing) * 60);
 }
 
@@ -138,10 +161,17 @@ Button:hover {
 }
 
 #sidebar.collapse-menu {
-    min-width: auto;
+    width: 70px;
+    align-items: center;
     gap: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.empty-sidebar {
+    /* z-index: 99; */
+    flex-shrink: 0;
+    width: 70px;
 }
 
 .hidden-menu {
@@ -150,4 +180,12 @@ Button:hover {
 
 * {
     /* border: 1px solid red; */
+}
+
+.no-scroball {
+    scrollbar-width: none;
+}
+
+body {
+    min-height: 100vh;
 }

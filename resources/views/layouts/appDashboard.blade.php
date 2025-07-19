@@ -10,14 +10,21 @@
 
     @vite('resources/css/app.css')
     @vite('resources/js/appDashboard.js')
+
+    <style>
+        body {
+            background-color: var(--color-black)
+        }
+    </style>
 </head>
 
 <body>
-    <div class="flex min-h-screen bg-black">
+    <div class="flex bg-black min-h-screen relative">
         {{-- sidebar --}}
-        <div class="relative z-10"> @include('components.sidebar')</div>
+        <div class="relative z-10 min-h-screen"> @include('components.sidebar')</div>
+        <div class="empty-sidebar"></div>
 
-        <div class="bg-black text-white w-full relative">
+        <div class="bg-black text-white w-full min-h-full  relative">
             @include('components.header')
             @hasSection('headerTitle')
                 @yield('headerTitle')
