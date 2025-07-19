@@ -7,7 +7,7 @@
     </div>
 
     {{-- hanya tampilkan tombol jika $addText ada --}}
-    @if(isset($addText))
-        <button class="button button-primary text-nowrap sm:ml-0 ml-5">{{ $addText }}</button>
+    @if(isset($addText, $buttonId))
+        <button id="{{$buttonId}}"  class="button button-primary text-nowrap sm:ml-0 ml-5">{{ $addText }}</button>
     @endif
 </div>

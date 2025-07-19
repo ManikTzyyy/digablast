@@ -10,6 +10,7 @@
 
     @vite('resources/css/app.css')
     @vite('resources/js/appDashboard.js')
+    @vite('resources/js/formDialog.js')
 
     <style>
         body {

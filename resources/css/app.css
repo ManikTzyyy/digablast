@@ -189,3 +189,12 @@ Button:hover {
 body {
     min-height: 100vh;
 }
+
+
+.dialog-box{
+    display:none
+}
+
+.dialog-box.show{
+    display: flex;
+}

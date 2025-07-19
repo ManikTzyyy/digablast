@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="bg-black2 p-5">
-        <form action="" class="flex items-center gap-2 pb-5 w-full sm:w-auto relative">
+        <form action="" class="flex items-center gap-2 pb-5 w-full sm:w-fit relative">
             <input type="text" placeholder="Search item" class="w-full border rounded-sm border-stone-500 px-2 py-1">
             <button class="button button-success"><i class="fas fa-search"></i></button>
         </form><div class="w-full overflow-x-scroll no-scroball"><table class="w-full text-left"><tr class="bg-black text-stone-300 text-nowrap">
